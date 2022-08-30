@@ -1,9 +1,9 @@
-import Home from "./siteComponents/home";
+import LandingPage from "./siteComponents/landingPage";
 
 function App() {
   return (
     <div className="App">
-      <Home/>    
+      <LandingPage/>    
     </div>
   );
 }
