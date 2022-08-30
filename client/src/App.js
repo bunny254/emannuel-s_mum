@@ -1,8 +1,9 @@
+import Home from "./siteComponents/home";
 
 function App() {
   return (
     <div className="App">
-      <h1>Emmanuel's Mum Send Off</h1>
+      <Home/>    
     </div>
   );
 }
