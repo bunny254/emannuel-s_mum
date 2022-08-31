@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AnotherForm from './siteComponents/anotherForm';
 import LandingPage from "./siteComponents/landingPage";
-//import MakeContribution from "./siteComponents/makeContribution";
+import MakeContribution from "./siteComponents/makeContribution";
 
 function App() {
   return (
@@ -9,7 +8,7 @@ function App() {
       <Router>
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
-        <Route path='/contribute' element={<AnotherForm/>}/>
+        <Route path='/contribute' element={<MakeContribution/>}/>
       </Routes>  
       </Router>  
     </div>

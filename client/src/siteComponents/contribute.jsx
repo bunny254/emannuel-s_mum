@@ -15,8 +15,8 @@ const Contribute = () => {
   const [amount, setAmount] = useState("");
   const [mpesaMess, setMpesaMsg] = useState("");
   const [dateTime, setDateTime] = useState("");
-  const [checkSheet, setCheckSheet]=useState(false);
-  const {reset,register,handleSubmit}=useForm()
+  //const [checkSheet, setCheckSheet]=useState(false);
+  const {reset,handleSubmit}=useForm()
 /*
   const handleSheet=()=>{
     setCheckSheet(!checkSheet)
@@ -140,10 +140,10 @@ const Contribute = () => {
                 >
                   SUBMIT
                 </button>
-                {(checkSheet?<div className="mt-5">
+                <div className="mt-5">
                 <p>Thank You for Making Contribution</p>
                 <a href="https://docs.google.com/spreadsheets/d/1fmpABWjRLmVGwKQW-lqbaT6B4Aq3u05QihHUXym2mYo/edit?usp=sharing" className="ml-9 underline">Click to See Full List</a>
-                </div>:null)}
+                </div>
               </div>
             </form>
           </div>
