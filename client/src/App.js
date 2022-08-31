@@ -1,9 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AnotherForm from './siteComponents/anotherForm';
 import LandingPage from "./siteComponents/landingPage";
+//import MakeContribution from "./siteComponents/makeContribution";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>    
+      <Router>
+      <Routes>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/contribute' element={<AnotherForm/>}/>
+      </Routes>  
+      </Router>  
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
           </div>
           <div className="mt-7 grid justify-center">
             <p className="text-3xl text-blue-900 font-extrabold ">Psalms 51:10</p>
-            <button className="bg-green-500 rounded-2xl p-2 mt-7">CONTRIBUTE</button>
+            <button className="bg-green-500 rounded-2xl p-2 mt-7"><Link to='/contribute'>CONTRIBUTE</Link></button>
           </div>
         </div>
       </div>

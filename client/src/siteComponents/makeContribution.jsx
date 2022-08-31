@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from './header';
-import Home from './home';
+import Contribute from './contribute';
 import Footer from './footer';
 
-const LandingPage = () => {
+const MakeContribution = () => {
   return (
     <div>
         <Header/>
-        <Home/>
+        <Contribute/>
         <Footer/>
     </div>
   )
 }
 
-export default LandingPage
+export default MakeContribution
