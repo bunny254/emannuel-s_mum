@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from './header';
-import AnotherForm from './anotherForm';
+//import AnotherForm from './anotherForm';
 import Footer from './footer';
+import Contribute from './contribute';
 
 const MakeContribution = () => {
   return (
     <div>
         <Header/>
-        <AnotherForm/>
+        <Contribute/>
         <Footer/>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import {useForm}from 'react-hook-form';
 import axios from "axios";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
@@ -15,12 +15,12 @@ const Contribute = () => {
   const [amount, setAmount] = useState("");
   const [mpesaMess, setMpesaMsg] = useState("");
   const [dateTime, setDateTime] = useState("");
-  //const [checkSheet, setCheckSheet]=useState(false);
+  const [checkSheet, setCheckSheet]=useState(false);
   const {reset,handleSubmit}=useForm()
-/*
+
   const handleSheet=()=>{
     setCheckSheet(!checkSheet)
-  } */
+  } 
 
   const handleCotribution = () => {
     //e.preventDefault();
@@ -137,13 +137,15 @@ const Contribute = () => {
                 <button
                   type="submit"
                   className="mt-4 p-1 bg-black text-white rounded-2xl"
+                  onClick={handleSheet}
                 >
-                  SUBMIT
+                  <a href="https://docs.google.com/spreadsheets/d/1fmpABWjRLmVGwKQW-lqbaT6B4Aq3u05QihHUXym2mYo/edit#gid=0">SUBMIT</a>
                 </button>
-                <div className="mt-5">
+                {(checkSheet?<div className="mt-5">
                 <p>Thank You for Making Contribution</p>
                 <a href="https://docs.google.com/spreadsheets/d/1fmpABWjRLmVGwKQW-lqbaT6B4Aq3u05QihHUXym2mYo/edit?usp=sharing" className="ml-9 underline">Click to See Full List</a>
-                </div>
+                </div>:null)}
+                
               </div>
             </form>
           </div>

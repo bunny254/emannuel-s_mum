@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-//import axios from "axios";
+import axios from "axios";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -20,8 +20,19 @@ const AnotherForm = () => {
       dateTime: "",
     },
     onSubmit: (values, { resetForm }) => {
-      console.log(values);
-      resetForm({ values: "" });
+      const data = {
+        FirstName: values.fName,
+        SecondName: values.sName,
+        PhoneNumber: values.phoneNumber,
+        AmountPaid: values.amount,
+        MpesaMessage: values.mpesaMess,
+        Date: values.dateTime,
+      };
+      axios
+        .post(
+          "https://sheet.best/api/sheets/6fdbda29-aab8-48ce-b7c4-d769eff909b0",
+          data
+        )
     },
   });
   
@@ -153,8 +164,8 @@ const AnotherForm = () => {
                 <button
                   type="submit"
                   className="mt-4 p-1 bg-black text-white rounded-2xl"
-                >
-                  SUBMIT
+                 onClick={e=>formik.resetForm()}>
+                  <a href="https://docs.google.com/spreadsheets/d/1fmpABWjRLmVGwKQW-lqbaT6B4Aq3u05QihHUXym2mYo/edit#gid=0">SUBMIT</a>
                 </button>
                 
                 
